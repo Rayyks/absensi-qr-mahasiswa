@@ -1,0 +1,129 @@
+.navi1{
+    opacity: 1;
+    height: 80px;
+    z-index: 4;
+    padding-left: 3%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+    background-color:white;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+.carousel-item{
+    opacity: 0.2;
+}
+
+.navi{
+    height: 100%;
+    padding-top: 1%;
+    padding-bottom: none;
+    padding-left: 5%;
+}
+#hero{
+    padding-top: 0%;    
+    z-index: -1;
+}
+.btn-get-started{
+    width:120px;
+    float:right;
+    color: rgb(1, 69, 146);
+}
+.float1{
+    margin-left:3%;
+    padding-top: 1%;
+
+    float:left;
+    width:30px;
+}
+.maintitle{
+    padding-top: 2%;
+    float:left;
+    height: 100%;
+    margin-left: 6%;
+    font-size: 32px;
+}
+.sec{
+    height: 5%;
+    
+}
+nav{
+    line-height: 150%;
+    height: 40%;
+}
+
+.opacity {
+    opacity: 0.8;
+  }
+.foot{
+    float: top;
+    height:45px;
+}
+.fowt{
+    width:100%;
+    float:left;
+    opacity: 0.2;
+    z-index: -2;
+}
+.foot-title{
+    float:left;
+    z-index:2;
+    margin-left:20px;
+    position: absolute;
+    bottom: 0;
+    top: 3cm;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+h1{
+    color: white;
+    font-family: 'Gill Sans MT';
+}
+h2{
+    color:rgb(163, 163, 163);
+    font-size: 18px;
+    font-weight: bolder;
+}
+.bodeh{
+    background-color: rgb(1, 69, 146);
+}
+div { position: relative; }
+div div { position: absolute; top: 0; left: 0; }
+#hero .contained-text {
+    position: absolute;
+    width:70%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    right: 0;
+    display: flex;
+    margin-left:15%;
+    justify-content: center;
+    text-align: left;
+    padding: 0 15px;
+    flex-direction: column;
+}
+.carousel{
+    margin-top: 80px;
+    margin-left:5%;
+    width:90%;
+    height:90%;
+}
+.sldr{
+    width:100%;
+}
+.carousel-control-prev{
+    z-index: 4;
+    float:left;
+}
+.carousel-control-next {
+    z-index: 10;
+    float:left;
+}
