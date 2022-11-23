@@ -19,7 +19,7 @@ if ($cek > 0) {
         $_SESSION['username'] = $username;
         $_SESSION['level'] = "dosen";
         // alihkan ke halaman dashboard admin
-        header("location:./admin/absensi.php");
+        header("location:./admin/data_kelas.php");
         // cek jika user login sebagai pegawai
     } else if ($data['level'] == "mahasiswa") {
         // buat session login dan username
