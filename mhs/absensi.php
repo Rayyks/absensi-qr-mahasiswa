@@ -10,7 +10,7 @@ if (isset($_POST['scancode'])) {
 		$nama_siswa	= $data["nama_siswa"];
 		$hari_ini	= date("Y-m-d");
 		$jam		= date("H:i:s");
-		$status		= "Hadir";
+		$status		= ["Hadir", "Izin", "Sakit", "Telat"];
 
 		$sql1		= "SELECT tanggal FROM absensi WHERE nim='$nim' AND tanggal='$hari_ini'";
 		$query1  	= mysqli_query($db_koneksi, $sql1);
