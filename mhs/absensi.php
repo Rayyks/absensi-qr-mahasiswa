@@ -10,7 +10,11 @@ if (isset($_POST['scancode'])) {
 		$nama_siswa	= $data["nama_siswa"];
 		$hari_ini	= date("Y-m-d");
 		$jam		= date("H:i:s");
+<<<<<<< HEAD
 		$status		= ["Hadir", "Izin", "Sakit", "Telat"];
+=======
+		$status		= "Hadir","Izin","Sakit";
+>>>>>>> 228d97562549c6baf9ee2a2ef044d916f11f5a5b
 
 		$sql1		= "SELECT tanggal FROM absensi WHERE nim='$nim' AND tanggal='$hari_ini'";
 		$query1  	= mysqli_query($db_koneksi, $sql1);
@@ -51,6 +55,12 @@ if (isset($_POST['scancode'])) {
 					}
 					if (date("Y-m-$h") == $data4["tanggal"]) {
 						$keterangan[$d][$h]	= "H";
+					}
+					if (date("Y-m-$h") == $data4["tanggal"]) {
+						$keterangan[$d][$h]	= "I";
+					}
+					if (date("Y-m-$h") == $data4["tanggal"]) {
+						$keterangan[$d][$h]	= "S";
 					}
 				}
 			}
