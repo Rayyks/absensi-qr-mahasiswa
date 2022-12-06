@@ -12,7 +12,7 @@ if (isset($_GET['nim']) && $_GET['nim'] != '') {
 	// include file qrlib.php
 	include "phpqrcode/qrlib.php";
 	//Nama Folder file QR Code kita nantinya akan disimpan
-	$tempdir = "img_qrcode/";
+	$tempdir = "../mhs/img_qrcode/";
 	//jika folder belum ada, buat folder 
 	if (!file_exists($tempdir)) {
 		mkdir($tempdir);
