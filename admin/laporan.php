@@ -38,7 +38,7 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul class="nav-inner">
-          <!-- <li><a href="index.php">Home</a></li> -->
+          <li><a href="absensi.php">Absensi</a></li>
           <li class="nav-logo"><a><img src="logo.png" width="60" class="img-fluid"></a></li>
           <li><a href="data_kelas.php">Data Kelas</a></li>
           <li class="active"><a href="laporan.php">Laporan</a></li>
