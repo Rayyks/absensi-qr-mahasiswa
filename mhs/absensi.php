@@ -99,7 +99,7 @@ if (isset($_POST['scancode'])) {
 					<!-- <li><a href="index.php">Home</a></li> -->
 					<li class="active"><a href="absensi.php">Absensi</a></li>
 
-					<li class="nav-logo"><a><img src="logo.png" width="60" class="img-fluid"></a></li>
+					<li class="nav-logo"><a><img src="../logo.png" width="60" class="img-fluid"></a></li>
 
 					<li><a href="data_kelas.php">Data Kelas</a></li>
 					<li class="btn btn-danger"><a href="../logout.php">Logout</a></li>

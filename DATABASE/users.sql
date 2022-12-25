@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2022 at 12:06 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Waktu pembuatan: 25 Des 2022 pada 06.59
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,69 +24,68 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `absensi`
+-- Struktur dari tabel `absensi`
 --
 
 CREATE TABLE `absensi` (
-  `id_absensi` int(100) NOT NULL,
-  `nim` varchar(50) NOT NULL,
+  `id_absensi` int(10) NOT NULL,
+  `nim` varchar(11) NOT NULL,
   `tanggal` date NOT NULL,
   `jam` time NOT NULL,
   `status` enum('Hadir','Telat','Izin','Sakit','Alpa') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `absensi`
+-- Dumping data untuk tabel `absensi`
 --
 
 INSERT INTO `absensi` (`id_absensi`, `nim`, `tanggal`, `jam`, `status`) VALUES
-(1, 'Mhs-20210109', '2021-01-07', '15:56:09', 'Hadir');
+(1, 'Mhs-2021010', '2021-01-07', '15:56:09', 'Hadir');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kelas`
+-- Struktur dari tabel `kelas`
 --
 
 CREATE TABLE `kelas` (
-  `id_kelas` int(100) NOT NULL,
+  `id_kelas` int(30) NOT NULL,
   `kelas` enum('X','XI','XII') NOT NULL,
-  `jurusan_kelas` varchar(50) NOT NULL
+  `jurusan_kelas` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kelas`
+-- Dumping data untuk tabel `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `kelas`, `jurusan_kelas`) VALUES
-(7, 'X', 'RPL 2');
+(10, '', 'TRPL A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mahasiswa`
+-- Struktur dari tabel `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
-  `id_siswa` int(100) NOT NULL,
-  `id_kelas` int(100) NOT NULL,
-  `nim` varchar(50) NOT NULL,
-  `nama_siswa` varchar(100) NOT NULL,
+  `id_siswa` int(10) NOT NULL,
+  `id_kelas` int(30) NOT NULL,
+  `nim` varchar(11) NOT NULL,
+  `nama_siswa` varchar(50) NOT NULL,
   `jenis_kelamin` enum('L','P') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `mahasiswa`
+-- Dumping data untuk tabel `mahasiswa`
 --
 
 INSERT INTO `mahasiswa` (`id_siswa`, `id_kelas`, `nim`, `nama_siswa`, `jenis_kelamin`) VALUES
-(6, 7, 'Mhs-20210109', 'Siswa', 'L'),
-(7, 7, '434221100', 'asdfsas', 'L');
+(9, 10, 'lijuhljkhg', 'hjkgjhg', 'P');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -98,35 +97,36 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `nama`, `username`, `password`, `level`) VALUES
-(1, 'rayyand kananda', 'rayyand', 'rayymhs', 'dosen'),
 (2, 'mahasiswa', 'mhs1', 'mhs123', 'mahasiswa'),
-(6, 'MAHASISWA', 'mhs2', 'mhs321', 'mahasiswa'),
-(7, 'MAHASISWA3', 'mhs3', 'mhs666', 'mahasiswa'),
-(8, 'eqwreqwrewrew', 'qwerty', 'qwe', 'dosen');
+(9, 'DOSEN', 'dosen', 'dosen123', 'dosen'),
+(10, 'd', 'd', 'd', 'dosen'),
+(11, 'm', 'm', 'm', 'mahasiswa'),
+(12, 'dosen1', 'dosen1', 'dosen1', 'dosen'),
+(13, 'dosen', 'dosen1', '123', 'dosen');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `absensi`
+-- Indeks untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
   ADD PRIMARY KEY (`id_absensi`),
   ADD KEY `nim` (`nim`);
 
 --
--- Indexes for table `kelas`
+-- Indeks untuk tabel `kelas`
 --
 ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id_kelas`);
 
 --
--- Indexes for table `mahasiswa`
+-- Indeks untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id_siswa`),
@@ -134,51 +134,51 @@ ALTER TABLE `mahasiswa`
   ADD KEY `nim` (`nim`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `absensi`
+-- AUTO_INCREMENT untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_absensi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `kelas`
+-- AUTO_INCREMENT untuk tabel `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_kelas` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `mahasiswa`
+-- AUTO_INCREMENT untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id_siswa` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_siswa` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `absensi`
+-- Ketidakleluasaan untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
   ADD CONSTRAINT `absensi_ibfk_1` FOREIGN KEY (`nim`) REFERENCES `mahasiswa` (`nim`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `mahasiswa`
+-- Ketidakleluasaan untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD CONSTRAINT `mahasiswa_ibfk_1` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON UPDATE CASCADE;

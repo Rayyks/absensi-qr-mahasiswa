@@ -31,7 +31,7 @@
 
 			<!-- The main logo is shown in mobile version only. The centered nav-logo in nav menu is displayed in desktop view  -->
 			<div class="logo d-block d-lg-none">
-				<a href="index.html"><img src="logo_mhs.png" class="img-fluid"></a>
+				<a href="index.html"><img src="logo.png" class="img-fluid"></a>
 			</div>
 
 			<nav class="nav-menu d-none d-lg-block">
@@ -39,7 +39,7 @@
 					<!-- <li><a href="index.php">Home</a></li> -->
 					<li><a href="absensi.php">Absensi</a></li>
 
-					<li class="nav-logo"><a><img src="logo_mhs.png" width="60" class="img-fluid"></a></li>
+					<li class="nav-logo"><a><img src="../logo.png" width="60" class="img-fluid"></a></li>
 					<li class="active"><a href="data_kelas.php">Data Kelas</a></li>
 					<li class="btn btn-danger"><a href="../logout.php">Logout</a></li>
 				</ul>
