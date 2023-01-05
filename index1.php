@@ -27,7 +27,7 @@
             <input type="password" name="password" class="form_login" placeholder="Password .." required="required">
 
             <input type="submit" class="tombol_login" value="LOGIN">
-            <a href="register.php" class="regis">Register</a>
+            <!-- <a href="register.php" class="regis">Register</a> -->
 
             <br />
             <br />
